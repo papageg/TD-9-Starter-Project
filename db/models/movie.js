@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Movie.associate = (models) => {
     // TODO Add associations.
+    Movie.belongsTo(models.Person);
   };
 
   return Movie;
