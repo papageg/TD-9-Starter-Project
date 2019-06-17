@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   Person.associate = (models) => {
     // TODO Add associations.
     Person.hasMany(models.Movie, {
+      as: 'director',
       foreignKey:{
         fieldName: 'directorPersonId',
         allowNull: false,
